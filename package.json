@@ -1,0 +1,20 @@
+{
+  "name": "signature.js",
+  "version": "1.0.0",
+  "description": "Create multiple function signatures for JS",
+  "main": "dist/index.js",
+  "scripts": {
+    "compile": "babel -e 0 src -d dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hirokiosame/signature.js.git"
+  },
+  "author": "Hiroki Osame",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hirokiosame/signature.js/issues"
+  },
+  "homepage": "https://github.com/hirokiosame/signature.js#readme"
+}
