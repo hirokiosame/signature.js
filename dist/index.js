@@ -37,6 +37,7 @@ function signature() {
 	}
 
 	return function mapArgs(args) {
+		var _throw = arguments.length <= 1 || arguments[1] === undefined ? false : arguments[1];
 
 		var argLen = args.length;
 
@@ -90,9 +91,15 @@ function signature() {
 			}
 		}
 
-		throw new Error('No matching function signature!');
+		if (_throw) {
+			throw new Error('No matching function signature!');
+		}
+
+		return {};
 	};
 }
 
 ;
 module.exports = exports['default'];
+
+//# sourceMappingURL=index.js.map

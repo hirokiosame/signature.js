@@ -4,7 +4,7 @@ export default function signature (...args) {
 
 	for( let sig of args ){ (sigs[sig.length] = sigs[sig.length] || []).push(sig); }
 
-	return function mapArgs (args) {
+	return function mapArgs (args, _throw = false) {
 
 		let argLen = args.length;
 
@@ -41,6 +41,10 @@ export default function signature (...args) {
 
 		}
 
-		throw new Error('No matching function signature!');
+		if( _throw ){
+			throw new Error('No matching function signature!');
+		}
+
+		return {};
 	};
 };
